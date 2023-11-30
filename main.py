@@ -85,43 +85,43 @@ current_order_columns = ('Nr zlecenia',
                          'Wynik OEE')
 current_order_treeview = ttk.Treeview(frame_Mid,columns=current_order_columns,show="headings",height=2)
 current_order_treeview.heading('Nr zlecenia', text='Nr zlecenia')
-current_order_treeview.column('Nr zlecenia',minwidth=0,width=100,stretch=NO)
+current_order_treeview.column('Nr zlecenia',minwidth=0,width=100,stretch=NO,anchor=CENTER)
 
 current_order_treeview.heading('Nr produktu', text='Nr produktu')
-current_order_treeview.column('Nr produktu', minwidth=0,width=220,stretch=NO)
+current_order_treeview.column('Nr produktu', minwidth=0,width=220,stretch=NO,anchor=CENTER)
 
 current_order_treeview.heading('Przezbrojenie rozp.', text='Przezbrojenie rozp.')
-current_order_treeview.column('Przezbrojenie rozp.',  minwidth=0,width=112,stretch=NO)
+current_order_treeview.column('Przezbrojenie rozp.',  minwidth=0,width=112,stretch=NO,anchor=CENTER)
 
 
 current_order_treeview.heading('Typ przezb.', text='Typ przezb.')
-current_order_treeview.column('Typ przezb.', minwidth=0,width=90,stretch=NO)
+current_order_treeview.column('Typ przezb.', minwidth=0,width=90,stretch=NO,anchor=CENTER)
 
 current_order_treeview.heading('Przezbrojenie zakoń.', text='Przezbrojenie zakoń.')
-current_order_treeview.column('Przezbrojenie zakoń.', minwidth=0,width=114,stretch=NO)
+current_order_treeview.column('Przezbrojenie zakoń.', minwidth=0,width=114,stretch=NO,anchor=CENTER)
 
 
 current_order_treeview.heading('Suma strat', text='Suma strat')
-current_order_treeview.column('Suma strat', minwidth=0,width=100,stretch=NO)
+current_order_treeview.column('Suma strat', minwidth=0,width=100,stretch=NO,anchor=CENTER)
 
 current_order_treeview.heading('Ilość wyprodukowana', text='Ilość wyprodukowana')
-current_order_treeview.column('Ilość wyprodukowana', minwidth=0,width=130,stretch=NO)
+current_order_treeview.column('Ilość wyprodukowana', minwidth=0,width=130,stretch=NO,anchor=CENTER)
 
 current_order_treeview.heading('Godz. rozpoczęcia', text='Godz. rozpoczęcia')
-current_order_treeview.column('Godz. rozpoczęcia', minwidth=0,width=130,stretch=NO)
+current_order_treeview.column('Godz. rozpoczęcia', minwidth=0,width=130,stretch=NO,anchor=CENTER)
 
 
 current_order_treeview.heading('Godz. zakończenia', text='Godz. zakończenia')
-current_order_treeview.column('Godz. zakończenia', minwidth=0,width=130,stretch=NO)
+current_order_treeview.column('Godz. zakończenia', minwidth=0,width=130,stretch=NO,anchor=CENTER)
 
 current_order_treeview.heading('Czas pracy', text='Czas pracy')
-current_order_treeview.column('Czas pracy', minwidth=0,width=100,stretch=NO)
+current_order_treeview.column('Czas pracy', minwidth=0,width=100,stretch=NO,anchor=CENTER)
 
 current_order_treeview.heading('Cel', text='Cel')
-current_order_treeview.column('Cel', minwidth=0,width=120,stretch=NO)
+current_order_treeview.column('Cel', minwidth=0,width=120,stretch=NO,anchor=CENTER)
 
 current_order_treeview.heading('Wynik OEE', text='Wynik OEE')
-current_order_treeview.column('Wynik OEE',minwidth=0,width=120,stretch=NO)
+current_order_treeview.column('Wynik OEE',minwidth=0,width=120,stretch=NO,anchor=CENTER)
 current_order_treeview.place(x=10,y=70)
 
 order_start_button = Button(root,width=25,text="Rozpoczęcie zlecenia",font=font_small,background=starting_color)
@@ -129,4 +129,7 @@ order_start_button.place(x=10,y=300)
 order_start_button = Button(root,width=25,text="Zakończenie zlecenia",font=font_small,background=ending_color)
 order_start_button.place(x=1190,y=300) 
 
+
+#mylist=(434343,3434343434,22,2255,2424,2424)
+#current_order_treeview.insert('',END,values=mylist)
 root.mainloop()
