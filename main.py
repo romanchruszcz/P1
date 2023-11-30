@@ -6,6 +6,12 @@ frame_color = "black"
 active_color = "white"
 font_big = ("Helvetica",24,"bold")
 font_mid = ("Helvetica", 18,"bold")
+font_small = ("Helvetica", 14,"bold")
+login_color = "Blue"
+ending_color = "red"
+starting_color = "green"
+losses_color = "yellow"
+
 root = Tk()
 root.geometry("1920x1080")
 root.config(background=general_bg_color)
@@ -117,5 +123,10 @@ current_order_treeview.column('Cel', minwidth=0,width=120,stretch=NO)
 current_order_treeview.heading('Wynik OEE', text='Wynik OEE')
 current_order_treeview.column('Wynik OEE',minwidth=0,width=120,stretch=NO)
 current_order_treeview.place(x=10,y=70)
+
+order_start_button = Button(root,width=25,text="Rozpoczęcie zlecenia",font=font_small,background=starting_color)
+order_start_button.place(x=10,y=300) 
+order_start_button = Button(root,width=25,text="Zakończenie zlecenia",font=font_small,background=ending_color)
+order_start_button.place(x=1190,y=300) 
 
 root.mainloop()
