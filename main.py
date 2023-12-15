@@ -16,6 +16,7 @@ losses_color = "yellow"
 root = Tk()
 root.geometry("1920x1080")
 root.config(background=general_bg_color)
+root.resizable(0,0)
 frame_Top = Frame(root,width=1500,height=115,background=general_bg_color,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
 frame_Top.place(x=5,y=10)
 label_in_Top = Label(frame_Top, width = 77, height= 1, background=active_color,borderwidth=2,relief="solid",text="DANE PODSTAWOWE")  # basic informations
@@ -190,12 +191,24 @@ finished_order_treeview.heading('Wynik OEE', text='Wynik OEE')
 finished_order_treeview.column('Wynik OEE',minwidth=0,width=120,stretch=NO,anchor=CENTER)
 finished_order_treeview.place(x=10,y=70)
 
+login_button = Button(root,width=20,background=login_color,text="LOGOWANIE",foreground=active_color,font=font_small,pady=5)
+login_button.place(x=1510,y=10)
+
+clear_button = Button(root,width=18,background=ending_color,text="CZYSZCZENIE",foreground=losses_color,height=1,pady=11)
+clear_button.place(x=1770,y=10)
+
+add_losses = Button(root,width=20,background=losses_color,text="DODAJ STRATY",font=font_small,pady=5)
+add_losses.place(x=1510,y=78)
+
+remove_loss_button = Button(root,width=18,background=ending_color,text="USUŃ STRATĘ",foreground=losses_color,height=1,pady=11)
+remove_loss_button.place(x=1770,y=78)
 
 
+frame_Right = Frame(root,width=405,height=790,background=general_bg_color,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
+frame_Right.place(x=1510,y=135)
 
 #mylist=(434343,3434343434,22,2255,2424,2424)
-#current_order_treeview.insert('',END,values=mylist)
-
+#finished_order_treeview.insert('',END,values=mylist)
 
 
 
