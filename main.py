@@ -128,15 +128,15 @@ current_order_treeview.place(x=10,y=70)
 
 order_start_button = Button(root,width=25,text="Rozpoczęcie zlecenia",font=font_small,background=starting_color)
 order_start_button.place(x=10,y=300) 
-order_start_button = Button(root,width=25,text="Zakończenie zlecenia",font=font_small,background=ending_color)
-order_start_button.place(x=1190,y=300) 
+order_end_button = Button(root,width=25,text="Zakończenie zlecenia",font=font_small,background=ending_color)
+order_end_button.place(x=1190,y=300) 
 
 frame_Bottom = Frame(root,width=1500,height=570,background=general_bg_color,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
 frame_Bottom.place(x=5,y=355)
 
-label_in_Bottom = Label(frame_Bottom, width = 77, height= 1, background=active_color,borderwidth=2,relief="solid",text="LISTA ZLECEŃ ZAKOŃCZONYCH",foreground="BLUE")
-label_in_Bottom.configure(font=font_big)
-label_in_Bottom.place(x=10,y=10)
+label_on_Bottom = Label(frame_Bottom, width = 77, height= 1, background=active_color,borderwidth=2,relief="solid",text="LISTA ZLECEŃ ZAKOŃCZONYCH",foreground="BLUE")
+label_on_Bottom.configure(font=font_big)
+label_on_Bottom.place(x=10,y=10)
 
 current_order_columns = ('Nr zlecenia',
                          'Nr produktu',
@@ -207,37 +207,42 @@ remove_loss_button.place(x=1770,y=78)
 frame_Right = Frame(root,width=405,height=790,background=general_bg_color,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
 frame_Right.place(x=1510,y=135)
 
+
+label_on_Right= Label(frame_Right, width = 20, height= 1, background=active_color,borderwidth=2,relief="solid",text="STRATY",foreground="BLUE")
+label_on_Right.configure(font=font_big)
+label_on_Right.place(x=10,y=10)
+
+
+losses_columns = ('Typ',
+                  'Moduł',
+                  'Przyczyna',
+                  'Ilość minut')
+
+
+
+losses_treeview = ttk.Treeview(frame_Right,columns=losses_columns,show="headings",height=33)
+losses_treeview.heading('Typ', text='Typ')
+losses_treeview.column('Typ',minwidth=0,width=100,stretch=NO,anchor=CENTER)
+
+losses_treeview.heading('Moduł', text='Moduł')
+losses_treeview.column('Moduł',minwidth=0,width=100,stretch=NO,anchor=CENTER)
+
+losses_treeview.heading('Przyczyna', text='Przyczyna')
+losses_treeview.column('Przyczyna',minwidth=0,width=100,stretch=NO,anchor=CENTER)
+
+losses_treeview.heading('Ilość minut', text='Ilość min.')
+losses_treeview.column('Ilość minut',minwidth=0,width=82,stretch=NO,anchor=CENTER)
+
+losses_treeview.place(x=10,y=70)
 #mylist=(434343,3434343434,22,2255,2424,2424)
 #finished_order_treeview.insert('',END,values=mylist)
 
+result_label = Label(root, height =2, width =15,text = "WYNIK OEE %:",background=active_color,font=font_big,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
+result_label.place(x=700,y=950)
 
+percentage_label = Label(root, height =2, width =9,text = "0 %",background=active_color,font=font_big,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
+percentage_label.place(x=1000,y=950)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ending_shift_button=Button(root, width=20,text="ZAKOŃCZENIE ZMIANY",font=font_mid,background=ending_color,pady=16,foreground=active_color)
+ending_shift_button.place(x=1190,y=950)
 root.mainloop()
