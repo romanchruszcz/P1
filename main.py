@@ -1,6 +1,8 @@
 from tkinter import *
-from tkinter import ttk 
-
+from tkinter import ttk
+from login import *
+def logging():
+    log_in = new_window()
 # settings for fonts and colors for backgrounds
 general_bg_color = "#cdced1"    # light grey
 frame_color = "#000000"         # black
@@ -192,7 +194,7 @@ finished_order_treeview.heading('Wynik OEE', text='Wynik OEE')
 finished_order_treeview.column('Wynik OEE',minwidth=0,width=120,stretch=NO,anchor=CENTER)
 finished_order_treeview.place(x=10,y=70)
 
-login_button = Button(root,width=20,background=login_color,text="LOGOWANIE",foreground=active_color,font=font_small,pady=5)
+login_button = Button(root,width=20,background=login_color,text="LOGOWANIE",foreground=active_color,font=font_small,pady=5,command=logging)
 login_button.place(x=1510,y=10)
 
 clear_button = Button(root,width=18,background=ending_color,text="CZYSZCZENIE",foreground=losses_color,height=1,pady=11)
@@ -235,8 +237,6 @@ losses_treeview.heading('Ilość minut', text='Ilość min.')
 losses_treeview.column('Ilość minut',minwidth=0,width=82,stretch=NO,anchor=CENTER)
 
 losses_treeview.place(x=10,y=70)
-#mylist=(434343,3434343434,22,2255,2424,2424)
-#finished_order_treeview.insert('',END,values=mylist)
 
 result_label = Label(root, height =2, width =15,text = "WYNIK OEE %:",background=active_color,font=font_big,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
 result_label.place(x=700,y=950)
@@ -246,4 +246,9 @@ percentage_label.place(x=1000,y=950)
 
 ending_shift_button=Button(root, width=20,text="ZAKOŃCZENIE ZMIANY",font=font_mid,background=ending_color,pady=16,foreground=active_color)
 ending_shift_button.place(x=1190,y=950)
+
+
+#mylist=(434343,3434343434,22,2255,2424,2424)
+#finished_order_treeview.insert('',END,values=mylist)
+
 root.mainloop()
