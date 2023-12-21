@@ -1,8 +1,11 @@
 from tkinter import *
 from tkinter import ttk
 from login import *
+from losses import *
 def logging():
-    log_in = new_window()
+    log_in = login_window()
+def losses():
+    losses_add = losses_window()
 # settings for fonts and colors for backgrounds
 general_bg_color = "#cdced1"    # light grey
 frame_color = "#000000"         # black
@@ -200,7 +203,7 @@ login_button.place(x=1510,y=10)
 clear_button = Button(root,width=18,background=ending_color,text="CZYSZCZENIE",foreground=losses_color,height=1,pady=11)
 clear_button.place(x=1770,y=10)
 
-add_losses = Button(root,width=20,background=losses_color,text="DODAJ STRATY",font=font_small,pady=5)
+add_losses = Button(root,width=20,background=losses_color,text="DODAJ STRATY",font=font_small,pady=5,command=losses)
 add_losses.place(x=1510,y=78)
 
 remove_loss_button = Button(root,width=18,background=ending_color,text="USUŃ STRATĘ",foreground=losses_color,height=1,pady=11)

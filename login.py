@@ -1,4 +1,5 @@
 from tkinter import *
+
 general_bg_color = "#cdced1"    # light grey
 frame_color = "#000000"         # black
 active_color = "#ffffff"        # white
@@ -10,8 +11,7 @@ font_big = ("Helvetica",24,"bold")
 font_mid = ("Helvetica", 18,"bold")
 font_small = ("Helvetica", 14,"bold")
 
-
-def new_window():
+def login_window():
     new_window = Tk()
     new_window.geometry("400x200")
     new_window.title("Log in")
@@ -29,6 +29,6 @@ def new_window():
 
     OK_button=Button(new_window,width=15,text="Zaloguj",pady=5)
     OK_button.place(x=80,y=150)
-    NOT_OK_button=Button(new_window,width=15,text="Anuluj",pady=5)
+    NOT_OK_button=Button(new_window,width=15,text="Anuluj",pady=5,command=new_window.destroy)
     NOT_OK_button.place(x=220,y=150)
     new_window.mainloop()
