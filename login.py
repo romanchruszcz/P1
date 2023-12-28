@@ -13,7 +13,16 @@ font_small = ("Helvetica", 14,"bold")
 
 def login_window():
     new_window = Tk()
-    new_window.geometry("400x200")
+    w = 400
+    h = 200
+
+    x1 = new_window.winfo_screenwidth()
+    y1 = new_window.winfo_screenheight()
+
+    x2 = (x1/2)-(w/2)
+    y2 = (y1/2)-(h/2)
+
+    new_window.geometry('%dx%d+%d+%d' % (w, h, x2, y2))
     new_window.title("Log in")
     new_window.configure(background=general_bg_color)
     login_label = Label(new_window,width=15,text="Login:",background=general_bg_color,font=font_small)
