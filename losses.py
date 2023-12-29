@@ -15,7 +15,7 @@ def losses_window():
     loss_window= Tk()
 
     w = 500
-    h = 445
+    h = 545
 
     x1 = loss_window.winfo_screenwidth()
     y1 = loss_window.winfo_screenheight()
@@ -43,15 +43,20 @@ def losses_window():
     Cat5.place(x=205,y=55)
     Cat6 = Radiobutton(category_frame,text=categories[5],variable=cat_value,value =6,font=font_small,background=general_bg_color)
     Cat6.place(x=380,y=55)
+    loss_modules = ttk.Treeview(loss_window,columns="Moduł",show="headings",height=15)
+    loss_modules.heading("Moduł", text="Moduł")
+    loss_modules.column("Moduł",minwidth=0,width=242,stretch=NO,anchor=CENTER)
+    loss_modules.place(x=5,y=110)
+
     loss_reasons = ttk.Treeview(loss_window,columns="Przyczyna",show="headings",height=15)
     loss_reasons.heading("Przyczyna", text="Przyczyna")
-    loss_reasons.column("Przyczyna",minwidth=0,width=250,stretch=NO,anchor=CENTER)
-    loss_reasons.place(x=5,y=110)
+    loss_reasons.column("Przyczyna",minwidth=0,width=242,stretch=NO,anchor=CENTER)
+    loss_reasons.place(x=252,y=110)
 
     minutes_entry = Entry(loss_window, width=5,justify=RIGHT,background=active_color,highlightcolor=frame_color,highlightthickness=1,highlightbackground=frame_color,font=font_big)
-    minutes_entry.place(x = 330, y= 140)
-    add_loss_button_to_main = Button(loss_window, width = 15,height=2,text = "Dodaj stratę",background=starting_color,font=font_small)
-    add_loss_button_to_main.place(x = 285, y= 260)
-    close_loss_window = Button(loss_window, width = 15,text = "Zamknij",background=ending_color,font=font_small)
-    close_loss_window.place(x = 285, y= 370)
+    minutes_entry.place(x = 80, y= 470)
+    add_loss_button_to_main = Button(loss_window, width = 18,height=2,text = "Dodaj stratę",background=starting_color,font=font_small,padx=10)
+    add_loss_button_to_main.place(x = 252, y= 440)
+    close_loss_window = Button(loss_window, width = 10,text = "Zamknij",background=ending_color,font=font_small,command=loss_window.destroy)
+    close_loss_window.place(x = 310, y= 502)
     loss_window.mainloop()
