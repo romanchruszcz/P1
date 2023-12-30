@@ -15,10 +15,8 @@ def login_window():
     new_window = Tk()
     w = 400
     h = 200
-
     x1 = new_window.winfo_screenwidth()
     y1 = new_window.winfo_screenheight()
-
     x2 = (x1/2)-(w/2)
     y2 = (y1/2)-(h/2)
 

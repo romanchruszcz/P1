@@ -16,10 +16,8 @@ def losses_window():
 
     w = 500
     h = 545
-
     x1 = loss_window.winfo_screenwidth()
     y1 = loss_window.winfo_screenheight()
-
     x2 = (x1/2)-(w/2)
     y2 = (y1/2)-(h/2)
 

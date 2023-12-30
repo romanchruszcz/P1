@@ -2,10 +2,13 @@ from tkinter import *
 from tkinter import ttk
 from login import *
 from losses import *
+from order import *
 def logging():
     log_in = login_window()
 def losses():
     losses_add = losses_window()
+def orders():
+    orders_add = orders_window()
 # settings for fonts and colors for backgrounds
 general_bg_color = "#cdced1"    # light grey
 frame_color = "#000000"         # black
@@ -132,7 +135,7 @@ current_order_treeview.heading('Wynik OEE', text='Wynik OEE')
 current_order_treeview.column('Wynik OEE',minwidth=0,width=120,stretch=NO,anchor=CENTER)
 current_order_treeview.place(x=10,y=70)
 
-order_start_button = Button(root,width=25,text="Rozpoczęcie zlecenia",font=font_small,background=starting_color)
+order_start_button = Button(root,width=25,text="Rozpoczęcie zlecenia",font=font_small,background=starting_color,command=orders)
 order_start_button.place(x=10,y=300) 
 order_end_button = Button(root,width=25,text="Zakończenie zlecenia",font=font_small,background=ending_color)
 order_end_button.place(x=1190,y=300) 
