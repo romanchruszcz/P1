@@ -25,7 +25,11 @@ def orders_window():
     y2 = (y1/2)-(h/2)
 
     order_window.geometry('%dx%d+%d+%d' % (w, h, x2, y2))
-    order_window.title("Straty-dodaj stratę")
+    order_window.title("Rozpoczęcie / Zakończenie zlecenia")
     order_window.configure(background=general_bg_color)
 
+    general_frame = Frame(order_window,width=1190,height=790,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
+    general_frame.place(x=5,y=5)
+    date_label = Label(general_frame,text="Data", font=font_small,background=general_bg_color)
+    date_label.place(x=5,y=5)
     order_window.mainloop()
