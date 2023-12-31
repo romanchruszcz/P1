@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-
+import funcs
 # settings for fonts and colors for backgrounds
 general_bg_color = "#cdced1"    # light grey
 frame_color = "#000000"         # black
@@ -30,6 +30,11 @@ def orders_window():
 
     general_frame = Frame(order_window,width=1190,height=790,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
     general_frame.place(x=5,y=5)
-    date_label = Label(general_frame,text="Data", font=font_small,background=general_bg_color)
+    date_label = Label(general_frame,text="Data:", font=font_small,background=general_bg_color)
     date_label.place(x=5,y=5)
+    date_entry = Entry(general_frame,width=10,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    date_entry.place(x=70,y=5)
+    date_entry.insert(0,funcs.date_converted)
+
+
     order_window.mainloop()
