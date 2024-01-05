@@ -47,4 +47,7 @@ def orders_window():
     time_entry.place(x=370,y=65)
     time_entry.insert(0,funcs.time_converted)
 
+
+    #dodac  numer zlecenia, rodzaj przezbrojenia, ilosc czasu przezbrojenia, numer produktu, zmiane predkosci maszyny
+    # ilosci dobre, odpad, zakonczenie produkcji
     order_window.mainloop()

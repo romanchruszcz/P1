@@ -3,6 +3,8 @@ from tkinter import ttk
 from login import *
 from losses import *
 from order import *
+import funcs
+
 def logging():
     log_in = login_window()
 def losses():
