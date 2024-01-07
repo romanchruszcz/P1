@@ -145,7 +145,7 @@ order_end_button.place(x=1190,y=300)
 frame_Bottom = Frame(root,width=1500,height=570,background=general_bg_color,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
 frame_Bottom.place(x=5,y=355)
 
-label_on_Bottom = Label(frame_Bottom, width = 77, height= 1, background=active_color,borderwidth=2,relief="solid",text="LISTA ZLECEŃ ZAKOŃCZONYCH",foreground="BLUE")
+label_on_Bottom = Label(frame_Bottom, width = 77, height= 1, background=active_color,borderwidth=2,relief="solid",text="LISTA ZLECEŃ ZAKOŃCZONYCH",foreground=frame_color)
 label_on_Bottom.configure(font=font_big)
 label_on_Bottom.place(x=10,y=10)
 

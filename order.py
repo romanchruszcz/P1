@@ -17,37 +17,68 @@ font_small = ("Helvetica", 14,"bold")
 def orders_window():
     order_window= Tk()
 
-    w = 1200
+    w = 600
     h = 800
-    x1 = order_window.winfo_screenwidth()
-    y1 = order_window.winfo_screenheight()
-    x2 = (x1/2)-(w/2)
-    y2 = (y1/2)-(h/2)
+    x1 = order_window.winfo_screenwidth()                       # gathering of the screen width
+    y1 = order_window.winfo_screenheight()                      # gathering of the screen height
+    x2 = (x1/2)-(w/2)                                           # screen width/2 - order_window width/2
+    y2 = (y1/2)-(h/2)                                           # screen height/2 - order_window height/2
 
-    order_window.geometry('%dx%d+%d+%d' % (w, h, x2, y2))
-    order_window.title("Rozpoczęcie / Zakończenie zlecenia")
-    order_window.configure(background=general_bg_color)
+    order_window.geometry('%dx%d+%d+%d' % (w, h, x2, y2))       # initial position of the window
+    order_window.title("Rozpoczęcie / Zakończenie zlecenia")    # title of the window
+    order_window.configure(background=general_bg_color)         # configuration of the background color
 
-    general_frame = Frame(order_window,width=1190,height=300,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
+    general_frame = Frame(order_window,width=590,height=200,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
     general_frame.place(x=5,y=5)
 
-    label_in_Top = Label(general_frame, width = 61, height= 1, background=active_color,borderwidth=2,relief="solid",text="Rozpoczęcie zlecenia")  # basic informations
-    label_in_Top.configure(font=font_big)
+    left_frame = Frame(order_window,width=295,height=200,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
+    left_frame.place(x=5,y=210)
+
+
+
+    label_in_Top = Label(general_frame, width = 37, height= 1, background=active_color,borderwidth=2,relief="solid",text="Informacje dot. zlecenia")  # basic informations
+    label_in_Top.configure(font=font_mid)
     label_in_Top.place(x=10,y=10)
 
     date_label = Label(general_frame,text="Data:", font=font_small,background=general_bg_color)
-    date_label.place(x=10,y=65)
+    date_label.place(x=180,y=65)
     date_entry = Entry(general_frame,width=10,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    date_entry.place(x=80,y=65)
+    date_entry.place(x=240,y=65)
     date_entry.insert(0,funcs.date_converted)
 
-    time_label = Label(general_frame,text="Godzina startu:", font=font_small,background=general_bg_color)
-    time_label.place(x=210,y=65)
-    time_entry = Entry(general_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    time_entry.place(x=370,y=65)
+    label_on_Left = Label(left_frame, width = 22, height= 1, background=active_color,borderwidth=2,relief="solid",text="Rozpoczęcie zlecenia")  # basic informations
+    label_on_Left.configure(font=font_small)
+    label_on_Left.place(x=10,y=10)
+
+    time_label = Label(left_frame,text="Godzina startu:", font=font_small,background=general_bg_color)
+    time_label.place(x=60,y=50)
+    time_entry = Entry(left_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    time_entry.place(x=215,y=50)
     time_entry.insert(0,funcs.time_converted)
+
+
+    right_frame = Frame(order_window,width=290,height=200,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
+    right_frame.place(x=305,y=210)
+
+    label_on_Right = Label(right_frame, width = 22, height= 1, background=active_color,borderwidth=2,relief="solid",text="Zakończenie zlecenia")  # basic informations
+    label_on_Right.configure(font=font_small)
+    label_on_Right.place(x=10,y=10)
+
+    time_label = Label(right_frame,text="Godzina zakończenia:", font=font_small,background=general_bg_color)
+    time_label.place(x=5,y=50)
+    time_entry = Entry(right_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    time_entry.place(x=215,y=50)
+    time_entry.insert(0,funcs.time_converted)    
+
+
+
+
+
 
 
     #dodac  numer zlecenia, rodzaj przezbrojenia, ilosc czasu przezbrojenia, numer produktu, zmiane predkosci maszyny
     # ilosci dobre, odpad, zakonczenie produkcji
+
+    order_number_label = Label(general_frame, text="Numer zlecenia:",font=font_small,background=general_bg_color)
+    order_number_label.place(x=10,y=100)
     order_window.mainloop()
