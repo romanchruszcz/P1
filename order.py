@@ -85,5 +85,9 @@ def orders_window():
     order_number_label.place(x=80,y=100)
     order_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     order_numer_entry.place(x=240,y=100)
+    product_number_label = Label(general_frame, text="Numer produktu:",font=font_small,background=general_bg_color)
+    product_number_label.place(x=70,y=150)
+    product_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    product_numer_entry.place(x=240,y=150)
 
     order_window.mainloop()
