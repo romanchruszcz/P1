@@ -1,10 +1,14 @@
 from tkinter import *
 import datetime
-add_date_and_time():
+def add_date():
     date_now = datetime.datetime.now()
     date_converted = date_now.strftime("%Y-%m-%d")
+    return date_converted
+def add_time():
+    date_now = datetime.datetime.now()
     time_converted = date_now.strftime("%H:%M")
-add_date_and_time2():
+    return time_converted, ""
+def add_time2():
     date_now = datetime.datetime.now()
     time_converted2 = date_now.strftime("%H:%M")
-print(time_converted)
+    return time_converted2

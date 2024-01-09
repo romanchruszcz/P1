@@ -12,11 +12,13 @@ losses_color = "#ffff1a"        # yellow
 font_big = ("Helvetica",24,"bold")
 font_mid = ("Helvetica", 18,"bold")
 font_small = ("Helvetica", 14,"bold")
-
-
+add_date_entry = funcs.add_date()
+add_time_entry = funcs.add_time()
+add_time_entry2 = funcs.add_time2()
 def orders_window():
+    
     order_window= Tk()
-
+    
     w = 600
     h = 800
     x1 = order_window.winfo_screenwidth()                       # gathering of the screen width
@@ -44,7 +46,7 @@ def orders_window():
     date_label.place(x=180,y=65)
     date_entry = Entry(general_frame,width=10,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     date_entry.place(x=240,y=65)
-    date_entry.insert(0,funcs.date_converted)
+    date_entry.insert(0,add_date_entry)
 
     label_on_Left = Label(left_frame, width = 22, height= 1, background=active_color,borderwidth=2,relief="solid",text="Rozpoczęcie zlecenia")  # basic informations
     label_on_Left.configure(font=font_small)
@@ -54,7 +56,7 @@ def orders_window():
     time_label.place(x=60,y=50)
     time_entry = Entry(left_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     time_entry.place(x=215,y=50)
-    time_entry.insert(0,funcs.time_converted)
+    time_entry.insert(0,add_time_entry[0])
 
 
     right_frame = Frame(order_window,width=290,height=200,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
@@ -68,7 +70,7 @@ def orders_window():
     time_label.place(x=5,y=50)
     time_entry = Entry(right_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     time_entry.place(x=215,y=50)
-    time_entry.insert(0,funcs.time_converted)    
+    time_entry.insert(0,add_time_entry[1])    
 
 
 
@@ -80,5 +82,8 @@ def orders_window():
     # ilosci dobre, odpad, zakonczenie produkcji
 
     order_number_label = Label(general_frame, text="Numer zlecenia:",font=font_small,background=general_bg_color)
-    order_number_label.place(x=10,y=100)
+    order_number_label.place(x=80,y=100)
+    order_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    order_numer_entry.place(x=240,y=100)
+
     order_window.mainloop()
