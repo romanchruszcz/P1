@@ -43,9 +43,9 @@ def orders_window():
     label_in_Top.place(x=10,y=10)
 
     date_label = Label(general_frame,text="Data:", font=font_small,background=general_bg_color)
-    date_label.place(x=180,y=65)
+    date_label.place(x=180,y=55)
     date_entry = Entry(general_frame,width=10,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    date_entry.place(x=240,y=65)
+    date_entry.place(x=240,y=55)
     date_entry.insert(0,add_date_entry)
 
     label_on_Left = Label(left_frame, width = 22, height= 1, background=active_color,borderwidth=2,relief="solid",text="Rozpoczęcie zlecenia")  # basic informations
@@ -57,6 +57,11 @@ def orders_window():
     time_entry = Entry(left_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     time_entry.place(x=215,y=50)
     time_entry.insert(0,add_time_entry[0])
+    order_exp_quantity_label = Label(left_frame,text="Wielkość zlecenia:", font=font_small,background=general_bg_color)
+    order_exp_quantity_label.place(x=30,y=90)
+    order_exp_quantity_entry = Entry(left_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    order_exp_quantity_entry.place(x=215,y=90)
+
 
 
     right_frame = Frame(order_window,width=290,height=200,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
@@ -72,7 +77,10 @@ def orders_window():
     time_entry.place(x=215,y=50)
     time_entry.insert(0,add_time_entry[1])    
 
-
+    order_pro_quantity_label = Label(right_frame,text="Ilość wyprodukowana:", font=font_small,background=general_bg_color)
+    order_pro_quantity_label.place(x=2,y=90)
+    order_pro_quantity_entry = Entry(right_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    order_pro_quantity_entry.place(x=215,y=90)
 
 
 
@@ -82,12 +90,18 @@ def orders_window():
     # ilosci dobre, odpad, zakonczenie produkcji
 
     order_number_label = Label(general_frame, text="Numer zlecenia:",font=font_small,background=general_bg_color)
-    order_number_label.place(x=80,y=100)
+    order_number_label.place(x=80,y=90)
     order_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    order_numer_entry.place(x=240,y=100)
+    order_numer_entry.place(x=240,y=90)
     product_number_label = Label(general_frame, text="Numer produktu:",font=font_small,background=general_bg_color)
-    product_number_label.place(x=70,y=150)
+    product_number_label.place(x=70,y=125)
     product_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    product_numer_entry.place(x=240,y=150)
+    product_numer_entry.place(x=240,y=125)
+
+
+    machine_speed_label = Label(general_frame, text="Prędkość maszyny:",font=font_small,background=general_bg_color)
+    machine_speed_label.place(x=43,y=160)
+    machine_speed_entry = Entry(general_frame,width=3,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    machine_speed_entry.place(x=240,y=160)
 
     order_window.mainloop()

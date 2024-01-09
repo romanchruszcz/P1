@@ -219,7 +219,7 @@ frame_Right = Frame(root,width=405,height=790,background=general_bg_color,highli
 frame_Right.place(x=1510,y=135)
 
 
-label_on_Right= Label(frame_Right, width = 20, height= 1, background=active_color,borderwidth=2,relief="solid",text="STRATY",foreground="BLUE")
+label_on_Right= Label(frame_Right, width = 20, height= 1, background=active_color,borderwidth=2,relief="solid",text="STRATY",foreground=frame_color)
 label_on_Right.configure(font=font_big)
 label_on_Right.place(x=10,y=10)
 
