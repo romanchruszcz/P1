@@ -48,6 +48,28 @@ def orders_window():
     date_entry.place(x=240,y=55)
     date_entry.insert(0,add_date_entry)
 
+    order_number_label = Label(general_frame, text="Numer zlecenia:",font=font_small,background=general_bg_color)
+    order_number_label.place(x=80,y=90)
+    order_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    order_numer_entry.place(x=240,y=90)
+    product_number_label = Label(general_frame, text="Numer produktu:",font=font_small,background=general_bg_color)
+    product_number_label.place(x=70,y=125)
+    product_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    product_numer_entry.place(x=240,y=125)
+
+
+    machine_speed_label = Label(general_frame, text="Prędkość maszyny:",font=font_small,background=general_bg_color)
+    machine_speed_label.place(x=43,y=160)
+    machine_speed_entry = Entry(general_frame,width=3,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    machine_speed_entry.place(x=240,y=160)
+
+
+
+
+
+
+
+
     label_on_Left = Label(left_frame, width = 22, height= 1, background=active_color,borderwidth=2,relief="solid",text="Rozpoczęcie zlecenia")  # basic informations
     label_on_Left.configure(font=font_small)
     label_on_Left.place(x=10,y=10)
@@ -62,7 +84,10 @@ def orders_window():
     order_exp_quantity_entry = Entry(left_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     order_exp_quantity_entry.place(x=215,y=90)
 
-
+    changeover_start_label = Label(left_frame,text="Czas przezbrojenia:", font=font_small,background=general_bg_color)
+    changeover_start_label.place(x=15,y=130)
+    changeover_start_entry = Entry(left_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    changeover_start_entry.place(x=215,y=130)
 
     right_frame = Frame(order_window,width=290,height=200,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
     right_frame.place(x=305,y=210)
@@ -82,26 +107,19 @@ def orders_window():
     order_pro_quantity_entry = Entry(right_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     order_pro_quantity_entry.place(x=215,y=90)
 
+    changeover_end_label = Label(right_frame,text="Czas przezbrojenia:", font=font_small,background=general_bg_color)
+    changeover_end_label.place(x=27,y=130)
+    changeover_end_entry = Entry(right_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    changeover_end_entry.place(x=215,y=130)
 
 
 
-
-    #dodac  numer zlecenia, rodzaj przezbrojenia, ilosc czasu przezbrojenia, numer produktu, zmiane predkosci maszyny
+    #, rodzaj przezbrojenia, ilosc czasu przezbrojenia,  zmiane predkosci maszyny
     # ilosci dobre, odpad, zakonczenie produkcji
 
-    order_number_label = Label(general_frame, text="Numer zlecenia:",font=font_small,background=general_bg_color)
-    order_number_label.place(x=80,y=90)
-    order_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    order_numer_entry.place(x=240,y=90)
-    product_number_label = Label(general_frame, text="Numer produktu:",font=font_small,background=general_bg_color)
-    product_number_label.place(x=70,y=125)
-    product_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    product_numer_entry.place(x=240,y=125)
 
 
-    machine_speed_label = Label(general_frame, text="Prędkość maszyny:",font=font_small,background=general_bg_color)
-    machine_speed_label.place(x=43,y=160)
-    machine_speed_entry = Entry(general_frame,width=3,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    machine_speed_entry.place(x=240,y=160)
+
+
 
     order_window.mainloop()
