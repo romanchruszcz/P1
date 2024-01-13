@@ -71,18 +71,12 @@ user_label_B = Label(frame_Top,text="SUPERUSER",background=general_bg_color)
 user_label_B.configure(font=font_mid,foreground="BLUE")
 user_label_B.place(x=1180,y=70)
 
-
 frame_Mid = Frame(root,width=1500,height=150,background=general_bg_color,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
 frame_Mid.place(x=5,y=135)
-
-
-
-
 
 label_in_Mid = Label(frame_Mid, width = 77, height= 1, background=active_color,borderwidth=2,relief="solid",text="AKTUALNE ZLECENIE",foreground="green")
 label_in_Mid.configure(font=font_big)
 label_in_Mid.place(x=10,y=10)
-
 
 current_order_columns = ('Nr zlecenia',
                          'Nr produktu',
@@ -106,13 +100,11 @@ current_order_treeview.column('Nr produktu', minwidth=0,width=220,stretch=NO,anc
 current_order_treeview.heading('Przezbrojenie rozp.', text='Przezbrojenie rozp.') 
 current_order_treeview.column('Przezbrojenie rozp.',  minwidth=0,width=112,stretch=NO,anchor=CENTER)
 
-
 current_order_treeview.heading('Typ przezb.', text='Typ przezb.')
 current_order_treeview.column('Typ przezb.', minwidth=0,width=90,stretch=NO,anchor=CENTER)
 
 current_order_treeview.heading('Przezbrojenie zakoń.', text='Przezbrojenie zakoń.')
 current_order_treeview.column('Przezbrojenie zakoń.', minwidth=0,width=114,stretch=NO,anchor=CENTER)
-
 
 current_order_treeview.heading('Suma strat', text='Suma strat')
 current_order_treeview.column('Suma strat', minwidth=0,width=100,stretch=NO,anchor=CENTER)
@@ -122,7 +114,6 @@ current_order_treeview.column('Ilość wyprodukowana', minwidth=0,width=130,stre
 
 current_order_treeview.heading('Godz. rozpoczęcia', text='Godz. rozpoczęcia')
 current_order_treeview.column('Godz. rozpoczęcia', minwidth=0,width=130,stretch=NO,anchor=CENTER)
-
 
 current_order_treeview.heading('Godz. zakończenia', text='Godz. zakończenia')
 current_order_treeview.column('Godz. zakończenia', minwidth=0,width=130,stretch=NO,anchor=CENTER)
@@ -171,13 +162,11 @@ finished_order_treeview.column('Nr produktu', minwidth=0,width=220,stretch=NO,an
 finished_order_treeview.heading('Przezbrojenie rozp.', text='Przezbrojenie rozp.') 
 finished_order_treeview.column('Przezbrojenie rozp.',  minwidth=0,width=112,stretch=NO,anchor=CENTER)
 
-
 finished_order_treeview.heading('Typ przezb.', text='Typ przezb.')
 finished_order_treeview.column('Typ przezb.', minwidth=0,width=90,stretch=NO,anchor=CENTER)
 
 finished_order_treeview.heading('Przezbrojenie zakoń.', text='Przezbrojenie zakoń.')
 finished_order_treeview.column('Przezbrojenie zakoń.', minwidth=0,width=114,stretch=NO,anchor=CENTER)
-
 
 finished_order_treeview.heading('Suma strat', text='Suma strat')
 finished_order_treeview.column('Suma strat', minwidth=0,width=100,stretch=NO,anchor=CENTER)
@@ -187,7 +176,6 @@ finished_order_treeview.column('Ilość wyprodukowana', minwidth=0,width=130,str
 
 finished_order_treeview.heading('Godz. rozpoczęcia', text='Godz. rozpoczęcia')
 finished_order_treeview.column('Godz. rozpoczęcia', minwidth=0,width=130,stretch=NO,anchor=CENTER)
-
 
 finished_order_treeview.heading('Godz. zakończenia', text='Godz. zakończenia')
 finished_order_treeview.column('Godz. zakończenia', minwidth=0,width=130,stretch=NO,anchor=CENTER)
@@ -214,10 +202,8 @@ add_losses.place(x=1510,y=78)
 remove_loss_button = Button(root,width=18,background=ending_color,text="USUŃ STRATĘ",foreground=losses_color,height=1,pady=11)
 remove_loss_button.place(x=1770,y=78)
 
-
 frame_Right = Frame(root,width=405,height=790,background=general_bg_color,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
 frame_Right.place(x=1510,y=135)
-
 
 label_on_Right= Label(frame_Right, width = 20, height= 1, background=active_color,borderwidth=2,relief="solid",text="STRATY",foreground=frame_color)
 label_on_Right.configure(font=font_big)
@@ -228,8 +214,6 @@ losses_columns = ('Typ',
                   'Moduł',
                   'Przyczyna',
                   'Ilość minut')
-
-
 
 losses_treeview = ttk.Treeview(frame_Right,columns=losses_columns,show="headings",height=33)
 losses_treeview.heading('Typ', text='Typ')

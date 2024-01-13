@@ -1,5 +1,8 @@
 from tkinter import *
 import datetime
+
+changeover_type_list = ["Krótkie","Średnie","Długie"]
+
 def add_date():
     date_now = datetime.datetime.now()
     date_converted = date_now.strftime("%Y-%m-%d")

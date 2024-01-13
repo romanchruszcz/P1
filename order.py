@@ -33,10 +33,8 @@ def orders_window():
     general_frame = Frame(order_window,width=590,height=200,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
     general_frame.place(x=5,y=5)
 
-    left_frame = Frame(order_window,width=295,height=200,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
+    left_frame = Frame(order_window,width=295,height=250,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
     left_frame.place(x=5,y=210)
-
-
 
     label_in_Top = Label(general_frame, width = 37, height= 1, background=active_color,borderwidth=2,relief="solid",text="Informacje dot. zlecenia")  # basic informations
     label_in_Top.configure(font=font_mid)
@@ -57,18 +55,10 @@ def orders_window():
     product_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     product_numer_entry.place(x=240,y=125)
 
-
     machine_speed_label = Label(general_frame, text="Prędkość maszyny:",font=font_small,background=general_bg_color)
     machine_speed_label.place(x=43,y=160)
     machine_speed_entry = Entry(general_frame,width=3,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     machine_speed_entry.place(x=240,y=160)
-
-
-
-
-
-
-
 
     label_on_Left = Label(left_frame, width = 22, height= 1, background=active_color,borderwidth=2,relief="solid",text="Rozpoczęcie zlecenia")  # basic informations
     label_on_Left.configure(font=font_small)
@@ -89,7 +79,13 @@ def orders_window():
     changeover_start_entry = Entry(left_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     changeover_start_entry.place(x=215,y=130)
 
-    right_frame = Frame(order_window,width=290,height=200,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
+    changeover_start_type_label = Label(left_frame,text="Typ przezbrojenia:", font=font_small,background=general_bg_color)
+    changeover_start_type_label.place(x=5,y=170)
+    changeover_start_type_combo = ttk.Combobox(left_frame,values=funcs.changeover_type_list,width=7)
+    changeover_start_type_combo.configure(font=font_small)
+    changeover_start_type_combo.place(x=185,y=170)
+
+    right_frame = Frame(order_window,width=290,height=250,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
     right_frame.place(x=305,y=210)
 
     label_on_Right = Label(right_frame, width = 22, height= 1, background=active_color,borderwidth=2,relief="solid",text="Zakończenie zlecenia")  # basic informations
@@ -112,9 +108,13 @@ def orders_window():
     changeover_end_entry = Entry(right_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
     changeover_end_entry.place(x=215,y=130)
 
-
-
-    #, rodzaj przezbrojenia, ilosc czasu przezbrojenia,  zmiane predkosci maszyny
+    changeover_start_type_label = Label(right_frame,text="Typ przezbrojenia:", font=font_small,background=general_bg_color)
+    changeover_start_type_label.place(x=5,y=170)
+    changeover_start_type_combo = ttk.Combobox(right_frame,values=funcs.changeover_type_list,width=7)
+    changeover_start_type_combo.configure(font=font_small)
+    changeover_start_type_combo.place(x=185,y=170)
+    
+    #,zmiane predkosci maszyny
     # ilosci dobre, odpad, zakonczenie produkcji
 
 
