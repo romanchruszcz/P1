@@ -64,11 +64,11 @@ def orders_window():
     label_on_Left.configure(font=font_small)
     label_on_Left.place(x=10,y=10)
 
-    time_label = Label(left_frame,text="Godzina startu:", font=font_small,background=general_bg_color)
-    time_label.place(x=60,y=50)
-    time_entry = Entry(left_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    time_entry.place(x=215,y=50)
-    time_entry.insert(0,add_time_entry[0])
+    time_start_label = Label(left_frame,text="Godzina startu:", font=font_small,background=general_bg_color)
+    time_start_label.place(x=60,y=50)
+    time_start_entry = Entry(left_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    time_start_entry.place(x=215,y=50)
+    time_start_entry.insert(0,add_time_entry[0])
     order_exp_quantity_label = Label(left_frame,text="Wielkość zlecenia:", font=font_small,background=general_bg_color)
     order_exp_quantity_label.place(x=30,y=90)
     order_exp_quantity_entry = Entry(left_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
@@ -92,11 +92,11 @@ def orders_window():
     label_on_Right.configure(font=font_small)
     label_on_Right.place(x=10,y=10)
 
-    time_label = Label(right_frame,text="Godzina zakończenia:", font=font_small,background=general_bg_color)
-    time_label.place(x=5,y=50)
-    time_entry = Entry(right_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    time_entry.place(x=215,y=50)
-    time_entry.insert(0,add_time_entry[1])    
+    time_end_label = Label(right_frame,text="Godzina zakończenia:", font=font_small,background=general_bg_color)
+    time_end_label.place(x=5,y=50)
+    time_end_entry = Entry(right_frame,width=5,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    time_end_entry.place(x=215,y=50)
+    time_end_entry.insert(0,add_time_entry[1])    
 
     order_pro_quantity_label = Label(right_frame,text="Ilość wyprodukowana:", font=font_small,background=general_bg_color)
     order_pro_quantity_label.place(x=2,y=90)
@@ -116,7 +116,6 @@ def orders_window():
     
     #,zmiane predkosci maszyny
     # ilosci dobre, odpad, zakonczenie produkcji
-
 
 
 

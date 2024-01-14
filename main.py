@@ -130,7 +130,7 @@ current_order_treeview.place(x=10,y=70)
 
 order_start_button = Button(root,width=25,text="Rozpoczęcie zlecenia",font=font_small,background=starting_color,command=orders)
 order_start_button.place(x=10,y=300) 
-order_end_button = Button(root,width=25,text="Zakończenie zlecenia",font=font_small,background=ending_color)
+order_end_button = Button(root,width=25,text="Zakończenie zlecenia",font=font_small,background=ending_color,command=orders)
 order_end_button.place(x=1190,y=300) 
 
 frame_Bottom = Frame(root,width=1500,height=570,background=general_bg_color,highlightthickness=1,highlightbackground=frame_color,highlightcolor=frame_color)
