@@ -20,7 +20,7 @@ def orders_window():
     order_window= Tk()
     
     w = 600
-    h = 800
+    h = 580
     x1 = order_window.winfo_screenwidth()                       # gathering of the screen width
     y1 = order_window.winfo_screenheight()                      # gathering of the screen height
     x2 = (x1/2)-(w/2)                                           # screen width/2 - order_window width/2
@@ -33,7 +33,7 @@ def orders_window():
     general_frame = Frame(order_window,width=590,height=200,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
     general_frame.place(x=5,y=5)
 
-    left_frame = Frame(order_window,width=295,height=250,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
+    left_frame = Frame(order_window,width=295,height=290,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
     left_frame.place(x=5,y=210)
 
     label_in_Top = Label(general_frame, width = 37, height= 1, background=active_color,borderwidth=2,relief="solid",text="Informacje dot. zlecenia")  # basic informations
@@ -84,8 +84,11 @@ def orders_window():
     changeover_start_type_combo = ttk.Combobox(left_frame,values=funcs.changeover_type_list,width=7)
     changeover_start_type_combo.configure(font=font_small)
     changeover_start_type_combo.place(x=185,y=170)
+    
+    add_data_to_main = Button(order_window, width=15, text="Dodaj",font=font_small,background=starting_color)
+    add_data_to_main.place(x=60,y=510)
 
-    right_frame = Frame(order_window,width=290,height=250,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
+    right_frame = Frame(order_window,width=290,height=290,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)
     right_frame.place(x=305,y=210)
 
     label_on_Right = Label(right_frame, width = 22, height= 1, background=active_color,borderwidth=2,relief="solid",text="Zakończenie zlecenia")  # basic informations
@@ -117,7 +120,8 @@ def orders_window():
     #,zmiane predkosci maszyny
     # ilosci dobre, odpad, zakonczenie produkcji
 
-
+    end_order_in_main = Button(order_window, width=15, text="Zakończ",font=font_small,background=starting_color)
+    end_order_in_main.place(x=360,y=510)
 
 
 
