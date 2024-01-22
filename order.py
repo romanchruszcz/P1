@@ -15,6 +15,7 @@ font_small = ("Helvetica", 14,"bold")
 add_date_entry = funcs.add_date()
 add_time_entry = funcs.add_time()
 add_time_entry2 = funcs.add_time2()
+add_data_to_main_window = funcs.fill_main_window()
 def orders_window():
     
     order_window= Tk()
@@ -48,8 +49,8 @@ def orders_window():
 
     order_number_label = Label(general_frame, text="Numer zlecenia:",font=font_small,background=general_bg_color)
     order_number_label.place(x=80,y=90)
-    order_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
-    order_numer_entry.place(x=240,y=90)
+    order_number_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
+    order_number_entry.place(x=240,y=90)
     product_number_label = Label(general_frame, text="Numer produktu:",font=font_small,background=general_bg_color)
     product_number_label.place(x=70,y=125)
     product_numer_entry = Entry(general_frame,width=15,font=font_small,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1,justify=RIGHT)
@@ -85,7 +86,7 @@ def orders_window():
     changeover_start_type_combo.configure(font=font_small)
     changeover_start_type_combo.place(x=185,y=170)
     
-    add_data_to_main = Button(order_window, width=15, text="Dodaj",font=font_small,background=starting_color)
+    add_data_to_main = Button(order_window, width=15, text="Dodaj",font=font_small,background=starting_color,command=add_data_to_main_window)
     add_data_to_main.place(x=60,y=510)
 
     right_frame = Frame(order_window,width=290,height=290,background=general_bg_color,highlightbackground=frame_color,highlightcolor=frame_color,highlightthickness=1)

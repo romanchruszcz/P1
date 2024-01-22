@@ -1,4 +1,5 @@
 from tkinter import *
+import order
 import datetime
 
 changeover_type_list = ["Krótkie","Średnie","Długie"]
@@ -15,3 +16,6 @@ def add_time2():
     date_now = datetime.datetime.now()
     time_converted2 = date_now.strftime("%H:%M")
     return time_converted2
+def fill_main_window():
+    x = order.order_number_entry.get()
+    print(x)
