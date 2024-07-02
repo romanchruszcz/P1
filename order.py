@@ -18,7 +18,7 @@ add_time_entry2 = funcs.add_time2()
 add_data_to_main_window = funcs.fill_main_window()
 def orders_window():
     
-    order_window= Tk()
+    order_window= Toplevel()
     
     w = 600
     h = 580

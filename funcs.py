@@ -17,5 +17,6 @@ def add_time2():
     time_converted2 = date_now.strftime("%H:%M")
     return time_converted2
 def fill_main_window():
-    x = order.order_number_entry.get()
-    print(x)
+    pass
+    #x = order.order_number_entry.get()
+    #print(x)

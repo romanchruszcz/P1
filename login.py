@@ -12,7 +12,7 @@ font_mid = ("Helvetica", 18,"bold")
 font_small = ("Helvetica", 14,"bold")
 
 def login_window():
-    new_window = Tk()
+    new_window = Toplevel()
     w = 400
     h = 200
     x1 = new_window.winfo_screenwidth()

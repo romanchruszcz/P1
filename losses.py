@@ -12,7 +12,7 @@ font_mid = ("Helvetica", 18,"bold")
 font_small = ("Helvetica", 14,"bold")
 
 def losses_window():
-    loss_window= Tk()
+    loss_window= Toplevel()
 
     w = 500
     h = 545
